@@ -1,6 +1,6 @@
 # luci-app-smartdns
 
-此仓库为smartdns独立仓库，为单独编译使用, 在安装此界面前，需要先安装smartdns进程编译脚本。  
+源码fork于[smartdns](https://github.com/pymumu/luci-app-smartdns)，为单独编译使用, 在安装此界面前，需要先安装smartdns进程编译脚本。  
 请先安装[openwrt-smartdns](https://github.com/pymumu/openwrt-smartdns)
 
 使用时，请使用配套的版本。
