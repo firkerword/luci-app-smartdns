@@ -640,11 +640,11 @@ s.anonymous = true
 s.addremove = true
 s.template = "cbi/tblsection"
 
-o = s:option(Value, 'name', translate('File Name'), translate('File Name'))
+o = s:option(Value, 'name', translate('File Name'))
 o.rmempty = false
 o.datatype = 'string'
 
-o = s:option(Value, 'url', translate('URL'), translate('URL'))
+o = s:option(Value, 'url', translate('URL'))
 o.rmempty = false
 o.datatype = 'string'
 function o.validate(self, value, section)
@@ -667,13 +667,13 @@ function o.validate(self, value, section)
     return nil, translate("URL format error, format: http:// or https://")
 end
 
-o = s:option(ListValue, "type", translate("type"), translate("File Type"))
+o = s:option(ListValue, "type", translate("File Type"))
 o:value("list", translate("domain list (/etc/smartdns/domain-set)"))
 o:value("config", translate("smartdns config (/etc/smartdns/conf.d)"))
 o.default = "list"
 o.rempty = false
 
-o = s:option(Value, 'desc', translate('Description'), translate('Description'))
+o = s:option(Value, 'desc', translate('Description'))
 o.rmempty = true
 o.datatype = 'string'
 
