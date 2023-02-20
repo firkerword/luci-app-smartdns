@@ -1,4 +1,4 @@
-
+ 
 msgid "Additional Args for upstream dns servers"
 msgstr "额外的上游 DNS 服务器参数"
 
@@ -444,7 +444,7 @@ msgstr "测速模式无效。"
 msgid "Speed Check Mode"
 msgstr "测速模式"
 
-msgid "Smartdns speed check mode. "
+msgid "Smartdns speed check mode."
 msgstr "SmartDns测速模式设置。"
 
 msgid ""
