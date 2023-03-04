@@ -412,7 +412,7 @@ s.template = "cbi/tblsection"
 s.extedit  = luci.dispatcher.build_url("admin/services/smartdns/upstream/%s")
 
 ---- enable flag
-o = s:option(Flag, "enabled", translate("Enable"), translate("Enable"))
+o = s:option(Flag, "enabled", translate("Enable"))
 o.rmempty     = false
 o.default     = o.enabled
 o.cfgvalue    = function(...)
@@ -420,14 +420,14 @@ o.cfgvalue    = function(...)
 end
 
 ---- name
-s:option(Value, "name", translate("DNS Server Name"), translate("DNS Server Name"))
+s:option(Value, "name", translate("DNS Server Name"))
 
 ---- IP address
-o = s:option(Value, "ip", translate("ip"), translate("DNS Server ip"))
+o = s:option(Value, "ip", translate("DNS Server ip"))
 o.datatype = "or(ipaddr, string)"
 o.rmempty = false 
 ---- port
-o = s:option(Value, "port", translate("port"), translate("DNS Server port"))
+o = s:option(Value, "port", translate("DNS Server port"))
 o.placeholder = "default"
 o.datatype    = "port"
 o.rempty      = true
@@ -436,7 +436,7 @@ o:depends("type", "tcp")
 o:depends("type", "tls")
 
 ---- type
-o = s:option(ListValue, "type", translate("type"), translate("DNS Server type"))
+o = s:option(ListValue, "type", translate("DNS Server type"))
 o.placeholder = "udp"
 o:value("udp", translate("udp"))
 o:value("tcp", translate("tcp"))
@@ -647,11 +647,11 @@ s.anonymous = true
 s.addremove = true
 s.template = "cbi/tblsection"
 
-o = s:option(Value, 'name', translate('File Name'), translate('File Name'))
+o = s:option(Value, 'name', translate('File Name'))
 o.rmempty = false
 o.datatype = 'string'
 
-o = s:option(Value, 'url', translate('URL'), translate('URL'))
+o = s:option(Value, 'url', translate('URL'))
 o.rmempty = false
 o.datatype = 'string'
 function o.validate(self, value, section)
@@ -674,13 +674,13 @@ function o.validate(self, value, section)
     return nil, translate("URL format error, format: http:// or https://")
 end
 
-o = s:option(ListValue, "type", translate("type"), translate("File Type"))
+o = s:option(ListValue, "type", translate("File Type"))
 o:value("list", translate("domain list (/etc/smartdns/domain-set)"))
 o:value("config", translate("smartdns config (/etc/smartdns/conf.d)"))
 o.default = "list"
 o.rempty = false
 
-o = s:option(Value, 'desc', translate('Description'), translate('Description'))
+o = s:option(Value, 'desc', translate('Description'))
 o.rmempty = true
 o.datatype = 'string'
 
