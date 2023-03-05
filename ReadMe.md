@@ -16,7 +16,7 @@ feeds/luci/applications/luci-app-smartdns/
 ./scripts/feeds install luci -a
 ```
 
-> lede请下载lede分支
+> lede版
 
 ### 执行openwrt配置, 选中luci-app-smartdns
 
